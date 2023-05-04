@@ -1,5 +1,5 @@
-const { beforeEach } = require("node:test");
-const {Car} = require("./car");
+
+const Car = require("./car");
 let car;
 
 beforeEach(() =>{
@@ -8,17 +8,19 @@ beforeEach(() =>{
 
 test('car has price', () =>{
     expected = 1000;
-    actual = // this needs to be getting the Car this.price?
+    actual = car.price;
     expect(actual).toBe(expected);
 });
+
 test('car has manufacturer', () =>{
     expected = "Honda";
-    actual = // this needs to be getting the Car this.manufacturer?
+    actual = car.manufacturer;
     expect(actual).toBe(expected);
 });
+
 test('car has engineType', () =>{
     expected = "W engine";
-    actual = // this needs to be getting the Car this.engineType?
+    actual = car.engineType;
     expect(actual).toBe(expected);
 });
     
