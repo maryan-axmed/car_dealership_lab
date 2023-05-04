@@ -34,4 +34,32 @@ describe('dealership properties', () => {
 
 });
 
-// describe('')
+describe('can add car to the dealership stock', () =>{
+    test('adding cars to stock', () =>{
+        dealership.currentStock.push(carOne);
+        dealership.currentStock.push(carTwo);
+        expected = 2;
+        actual = dealership.currentStock.length;
+        expect(actual).toBe(expected);
+    });
+});
+
+describe('can get all the car manufacturers', () =>{
+    test('can get manufacturers', () =>{
+        dealership.currentStock.push(carOne);
+        dealership.currentStock.push(carTwo);
+        expected = 2;
+        actual =  dealership.getCarManufacturers.length;
+        expect(actual).toBe(expected);
+    });
+});
+
+describe('can calculate car value', () =>{
+    test.skip('can get value', () =>{
+        dealership.currentStock.push(carOne);
+        dealership.currentStock.push(carTwo);
+        expected = 6000;
+        actual =  dealership.valueOfCars;
+        expect(actual).toBe(expected);
+    });
+});
