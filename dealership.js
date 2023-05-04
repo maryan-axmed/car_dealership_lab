@@ -22,6 +22,7 @@ Dealership.prototype.addCarToStock = function(car){
 // then add them to a new array
 Dealership.prototype.getCarManufacturers = function(dealership){
     carManufacturers = [];
+    car = new Car();
     for(car of dealership.currentStock){
         carManufacturers.push(car.manufacturer);
     }
